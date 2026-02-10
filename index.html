@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? ♡</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <canvas id="hearts-canvas"></canvas>
+    
+    <div class="container" id="main-container">
+        <!-- QUESTION PAGE -->
+        <div class="question-page active" id="question-page">
+            <div class="emoji-header">
+            <img src="question.gif" alt="question" class="page-gif">
+            </div>
+            <h1 class="main-question">Will You Be My Valentine?</h1>
+            <p class="subtitle">I promise to make it worth your while... ♡</p>
+            
+            <div class="button-container">
+                <button class="btn btn-yes" id="yes-btn">Yes! Absolutely! ♡</button>
+                <button class="btn btn-no" id="no-btn">No...</button>
+            </div>
+        </div>
+
+        <!-- RECONSIDER PAGE 1 -->
+        <div class="question-page" id="reconsider-1">
+            <div class="emoji-header">
+             <img src="pg1.gif" alt="reconsider" class="page-gif">
+            </div>
+            <h2>Are you sure...?</h2>
+            <p class="persuasion-text">Think about all the fun we could have together...</p>
+            
+            <div class="button-container">
+                <button class="btn btn-yes enlarge" id="yes-btn-2">Okay, YES! ♡</button>
+                <button class="btn btn-no shrink" id="no-btn-2">Still no</button>
+            </div>
+        </div>
+
+        <!-- RECONSIDER PAGE 2 -->
+        <div class="question-page" id="reconsider-2">
+            <div class="emoji-header">
+            <img src="pg3.gif" alt="please" class="page-gif">
+            </div>
+            <h2>Please reconsider...</h2>
+            <p class="persuasion-text">Be your partner in crime... Make you laugh every single day...</p>
+            
+            <div class="button-container">
+                <button class="btn btn-yes enlarge-more" id="yes-btn-3">Fine, YES! ♡</button>
+                <button class="btn btn-no shrink-more" id="no-btn-3">Nope</button>
+            </div>
+        </div>
+
+        <!-- RECONSIDER PAGE 3 -->
+        <div class="question-page" id="reconsider-3">
+            <div class="emoji-header">
+            <img src="pg2.gif" alt="heartbroken" class="page-gif page-gif-small">
+            </div>
+            <h2>You're breaking my heart...</h2>
+            <p class="persuasion-text">What if I told you that you're the most amazing person I've ever met? That every moment with you feels like magic? That I can't imagine Valentine's Day without you?</p>
+            
+            <div class="button-container">
+                <button class="btn btn-yes huge" id="yes-btn-4">Okay okay, YES! ♡♡</button>
+                <button class="btn btn-no tiny" id="no-btn-4">...</button>
+            </div>
+        </div>
+
+        <!-- FINAL PLEA -->
+        <div class="question-page" id="final-plea">
+            <div class="emoji-header">
+                <img src="goobers.gif" alt="please" class="page-gif">
+            </div>
+            <h2>One last chance...</h2>
+            <p class="persuasion-text">I promise to:</p>
+            <ul class="promise-list">
+                <li>♡ Make you smile every single day</li>
+                <li>♡ Support you through everything</li>
+                <li>♡ Be your partner in crime</li>
+                <li>♡ Love you with all my heart</li>
+                <li>♡ Make this the best Valentine's Day ever</li>
+            </ul>
+            <p class="persuasion-text final-plea-text">So... what do you say?</p>
+            
+            <div class="button-container">
+                <button class="btn btn-yes massive" id="yes-btn-5">YES! I'M YOURS! ♡♡♡</button>
+                <button class="btn btn-no invisible" id="no-btn-5">no</button>
+            </div>
+        </div>
+
+        <!-- SUCCESS PAGE -->
+        <div class="question-page" id="success-page">
+            <div class="emoji-header celebration">
+              <img src="yay.gif" alt="celebration" class="page-gif page-gif-wide">
+            </div>
+            <h1 class="success-title">YOU SAID YES!</h1>
+            <p class="success-text">I'm the happiest person alive right now! ♡</p>
+            <div class="success-message">
+                <p>Get ready for the most amazing Valentine's Day ever!</p>
+                <p>I can't wait to spend it with you ♡</p>
+            </div>
+            <div class="heart-explosion" id="heart-explosion"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
