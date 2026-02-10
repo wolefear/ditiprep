@@ -15,6 +15,7 @@ body {
     place-items: center;
     overflow: hidden;
     position: relative;
+    padding: 7px;
 }
 
 /* Animated gradient background */
@@ -46,19 +47,19 @@ body::before {
 .container {
     position: relative;
     z-index: 10;
-    width: min(95vw, 560px);
-    perspective: 1000px;
+    width: min(95vw, 392px);
+    perspective: 700px;
 }
 
 .question-page {
     background: 
         linear-gradient(145deg, #2d2d2d 0%, #1a1a1a 50%, #0d0d0d 100%);
-    border-radius: 32px;
-    padding: clamp(24px, 4vw, 48px);
+    border-radius: 22px;
+    padding: clamp(14px, 2.8vw, 28px);
     box-shadow: 
-        0 40px 80px rgba(0,0,0,0.8),
-        inset 0 1px 2px rgba(255,255,255,0.1),
-        0 0 0 1px rgba(255,255,255,0.08);
+        0 28px 56px rgba(0,0,0,0.8),
+        inset 0 0.7px 1.4px rgba(255,255,255,0.1),
+        0 0 0 0.7px rgba(255,255,255,0.08);
     position: relative;
     display: none;
     text-align: center;
@@ -88,21 +89,21 @@ body::before {
 .question-page::after {
     content: '';
     position: absolute;
-    inset: -2.4px;
-    border-radius: 34px;
+    inset: -1.7px;
+    border-radius: 24px;
     background: linear-gradient(135deg, 
         rgba(255,255,255,0.3), 
         rgba(255,255,255,0.1), 
         rgba(255,255,255,0.25));
     z-index: -1;
     pointer-events: none;
-    filter: blur(2.4px);
+    filter: blur(1.7px);
 }
 
 .emoji-header {
-    font-size: clamp(3.2rem, 8vw, 4.8rem);
-    margin-bottom: 0.8rem;
-    filter: drop-shadow(0 0 16px rgba(255,255,255,0.4));
+    font-size: clamp(2.24rem, 5.6vw, 3.36rem);
+    margin-bottom: 0.56rem;
+    filter: drop-shadow(0 0 11px rgba(255,255,255,0.4));
     display: inline-block;
 }
 
@@ -112,61 +113,61 @@ body::before {
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-24px) scale(1.2); }
+    50% { transform: translateY(-17px) scale(1.2); }
 }
 
 .main-question, .success-title {
     font-family: 'Righteous', cursive;
-    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-size: clamp(1.12rem, 2.8vw, 1.96rem);
     background: linear-gradient(135deg, #ffffff 0%, #c0c0c0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 0.8rem;
-    letter-spacing: 1.6px;
+    margin-bottom: 0.56rem;
+    letter-spacing: 1.12px;
     text-transform: uppercase;
-    filter: drop-shadow(0 1.6px 6.4px rgba(255,255,255,0.3));
+    filter: drop-shadow(0 1.12px 4.5px rgba(255,255,255,0.3));
 }
 
 h2 {
     font-family: 'Righteous', cursive;
-    font-size: clamp(1.28rem, 3.2vw, 2rem);
+    font-size: clamp(0.9rem, 2.24vw, 1.4rem);
     color: #f0f0f0;
-    margin-bottom: 1.2rem;
-    letter-spacing: 0.8px;
+    margin-bottom: 0.84rem;
+    letter-spacing: 0.56px;
 }
 
 .subtitle, .persuasion-text {
-    font-size: clamp(0.88rem, 2vw, 1.12rem);
+    font-size: clamp(0.62rem, 1.4vw, 0.78rem);
     color: #d0d0d0;
-    margin-bottom: 1.6rem;
-    line-height: 1.8;
+    margin-bottom: 0.84rem;
+    line-height: 1.5;
     font-weight: 400;
 }
 
 .final-plea-text {
-    font-size: clamp(0.96rem, 2.4vw, 1.28rem);
+    font-size: clamp(0.67rem, 1.68vw, 0.9rem);
     font-weight: 700;
-    margin-top: 1.2rem;
+    margin-top: 0.56rem;
     color: #ffffff;
 }
 
 .promise-list {
     list-style: none;
     text-align: left;
-    margin: 1.6rem auto;
-    max-width: 360px;
+    margin: 0.7rem auto;
+    max-width: 224px;
     counter-reset: promise-counter;
 }
 
 .promise-list li {
-    font-size: clamp(0.8rem, 1.76vw, 1.04rem);
+    font-size: clamp(0.53rem, 1.12vw, 0.67rem);
     color: #e0e0e0;
-    margin: 0.8rem 0;
-    padding: 0.64rem 0.8rem;
+    margin: 0.42rem 0;
+    padding: 0.35rem 0.5rem;
     background: rgba(255,255,255,0.03);
-    border-left: 3.2px solid rgba(255,255,255,0.3);
-    border-radius: 6.4px;
+    border-left: 1.8px solid rgba(255,255,255,0.3);
+    border-radius: 3.5px;
     position: relative;
     transition: all 0.3s ease;
 }
@@ -174,48 +175,48 @@ h2 {
 .promise-list li:hover {
     background: rgba(255,255,255,0.06);
     border-left-color: #ffffff;
-    transform: translateX(8px);
+    transform: translateX(5.6px);
 }
 
 .button-container {
     display: flex;
-    gap: clamp(12px, 2.4vw, 20px);
+    gap: clamp(8px, 1.68vw, 14px);
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1.4rem;
     flex-wrap: wrap;
 }
 
 .btn {
     font-family: 'Quicksand', sans-serif;
     border: none;
-    border-radius: 48px;
+    border-radius: 34px;
     font-weight: 700;
     cursor: pointer;
     position: relative;
     overflow: visible;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.56px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn-yes {
     background: #ffffff;
     color: #000000;
-    padding: clamp(9.6px, 1.6vw, 14.4px) clamp(24px, 4vw, 40px);
-    font-size: clamp(0.8rem, 1.6vw, 1.04rem);
+    padding: clamp(6.7px, 1.12vw, 10px) clamp(17px, 2.8vw, 28px);
+    font-size: clamp(0.56rem, 1.12vw, 0.73rem);
     box-shadow: 
-        0 8px 24px rgba(255,255,255,0.2),
-        0 0 48px rgba(255,255,255,0.1),
-        inset 0 0.8px 0 rgba(255,255,255,0.9);
+        0 5.6px 17px rgba(255,255,255,0.2),
+        0 0 34px rgba(255,255,255,0.1),
+        inset 0 0.56px 0 rgba(255,255,255,0.9);
 }
 
 .btn-yes::before {
     content: '';
     position: absolute;
-    inset: -3.2px;
+    inset: -2.2px;
     background: linear-gradient(45deg, #ffffff, #888888, #ffffff);
-    border-radius: 51.2px;
+    border-radius: 36px;
     z-index: -1;
     opacity: 0;
     transition: opacity 0.4s;
@@ -232,22 +233,22 @@ h2 {
 }
 
 .btn-yes:hover {
-    transform: translateY(-6.4px) scale(1.08);
+    transform: translateY(-4.5px) scale(1.08);
     box-shadow: 
-        0 16px 40px rgba(255,255,255,0.3),
-        0 0 80px rgba(255,255,255,0.2);
+        0 11px 28px rgba(255,255,255,0.3),
+        0 0 56px rgba(255,255,255,0.2);
 }
 
 .btn-yes:active {
-    transform: translateY(-3.2px) scale(1.03);
+    transform: translateY(-2.2px) scale(1.03);
 }
 
 .btn-no {
     background: transparent;
     color: #808080;
-    padding: clamp(8px, 1.44vw, 11.2px) clamp(20px, 3.2vw, 28px);
-    font-size: clamp(0.72rem, 1.44vw, 0.88rem);
-    border: 1.6px solid rgba(128,128,128,0.3);
+    padding: clamp(5.6px, 1vw, 7.8px) clamp(14px, 2.24vw, 20px);
+    font-size: clamp(0.5rem, 1vw, 0.62rem);
+    border: 1.1px solid rgba(128,128,128,0.3);
     transition: all 0.3s ease;
 }
 
@@ -266,23 +267,23 @@ h2 {
 
 /* Progressive button sizes */
 .enlarge {
-    padding: clamp(12px, 2vw, 17.6px) clamp(32px, 4.8vw, 52px) !important;
-    font-size: clamp(0.88rem, 1.84vw, 1.2rem) !important;
+    padding: clamp(8.4px, 1.4vw, 12.3px) clamp(22px, 3.36vw, 36px) !important;
+    font-size: clamp(0.62rem, 1.29vw, 0.84rem) !important;
 }
 
 .enlarge-more {
-    padding: clamp(14.4px, 2.4vw, 20.8px) clamp(40px, 5.6vw, 64px) !important;
-    font-size: clamp(1.04rem, 2.08vw, 1.44rem) !important;
+    padding: clamp(10px, 1.68vw, 14.6px) clamp(28px, 3.92vw, 45px) !important;
+    font-size: clamp(0.73rem, 1.46vw, 1rem) !important;
 }
 
 .huge {
-    padding: clamp(17.6px, 2.8vw, 25.6px) clamp(48px, 6.4vw, 80px) !important;
-    font-size: clamp(1.2rem, 2.4vw, 1.68rem) !important;
+    padding: clamp(12.3px, 1.96vw, 17.9px) clamp(34px, 4.48vw, 56px) !important;
+    font-size: clamp(0.84rem, 1.68vw, 1.18rem) !important;
 }
 
 .massive {
-    padding: clamp(22.4px, 3.2vw, 32px) clamp(56px, 8vw, 96px) !important;
-    font-size: clamp(1.36rem, 2.8vw, 2rem) !important;
+    padding: clamp(15.7px, 2.24vw, 22.4px) clamp(39px, 5.6vw, 67px) !important;
+    font-size: clamp(0.95rem, 1.96vw, 1.4rem) !important;
     animation: mega-pulse 1.2s ease-in-out infinite;
 }
 
@@ -292,31 +293,31 @@ h2 {
 }
 
 .shrink {
-    padding: clamp(6.4px, 1.2vw, 9.6px) clamp(16px, 2.8vw, 24px) !important;
-    font-size: clamp(0.64rem, 1.28vw, 0.8rem) !important;
+    padding: clamp(4.5px, 0.84vw, 6.7px) clamp(11px, 1.96vw, 17px) !important;
+    font-size: clamp(0.45rem, 0.9vw, 0.56rem) !important;
 }
 
 .shrink-more {
-    padding: clamp(4.8px, 0.96vw, 8px) clamp(12px, 2.4vw, 19.2px) !important;
-    font-size: clamp(0.56rem, 1.12vw, 0.68rem) !important;
+    padding: clamp(3.4px, 0.67vw, 5.6px) clamp(8.4px, 1.68vw, 13.4px) !important;
+    font-size: clamp(0.39rem, 0.78vw, 0.48rem) !important;
 }
 
 .tiny {
-    padding: clamp(3.2px, 0.8vw, 5.6px) clamp(9.6px, 2vw, 14.4px) !important;
-    font-size: clamp(0.48rem, 0.96vw, 0.56rem) !important;
+    padding: clamp(2.2px, 0.56vw, 3.9px) clamp(6.7px, 1.4vw, 10px) !important;
+    font-size: clamp(0.34rem, 0.67vw, 0.39rem) !important;
     opacity: 0.4;
 }
 
 .invisible {
-    padding: clamp(2.4px, 0.64vw, 4px) clamp(6.4px, 1.6vw, 9.6px) !important;
-    font-size: clamp(0.32rem, 0.8vw, 0.4rem) !important;
+    padding: clamp(1.7px, 0.45vw, 2.8px) clamp(4.5px, 1.12vw, 6.7px) !important;
+    font-size: clamp(0.22rem, 0.56vw, 0.28rem) !important;
     opacity: 0.2;
     cursor: not-allowed;
 }
 
 /* Success page */
 .success-title {
-    font-size: clamp(2rem, 4.8vw, 3.6rem);
+    font-size: clamp(1.4rem, 3.36vw, 2.52rem);
     animation: rainbow-text 3s linear infinite;
 }
 
@@ -326,26 +327,26 @@ h2 {
 }
 
 .success-text {
-    font-size: clamp(0.96rem, 2.24vw, 1.44rem);
+    font-size: clamp(0.67rem, 1.57vw, 1rem);
     color: #f8f8f8;
-    margin: 1.2rem 0;
+    margin: 0.84rem 0;
     font-weight: 600;
 }
 
 .success-message {
-    margin-top: 1.6rem;
-    padding: clamp(12px, 2.4vw, 20px);
+    margin-top: 0.84rem;
+    padding: clamp(7px, 1.4vw, 11px);
     background: rgba(255,255,255,0.05);
-    border-radius: 16px;
-    border: 0.8px solid rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border: 0.56px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(5.6px);
 }
 
 .success-message p {
-    font-size: clamp(0.88rem, 2vw, 1.2rem);
+    font-size: clamp(0.56rem, 1.26vw, 0.7rem);
     color: #e8e8e8;
-    margin: 0.64rem 0;
-    line-height: 1.6;
+    margin: 0.35rem 0;
+    line-height: 1.5;
 }
 
 .heart-explosion {
@@ -359,118 +360,145 @@ h2 {
    MOBILE OPTIMIZATIONS
    ======================================== */
 
+/* Responsive GIF images - mobile-first sizing */
+.page-gif {
+    width: clamp(98px, 28vw, 168px);
+    height: auto;
+    max-width: 168px;
+    display: block;
+    margin: 0 auto 10.5px;
+    border-radius: 7px;
+}
+
+.page-gif-small {
+    width: clamp(70px, 21vw, 112px);
+    max-width: 112px;
+}
+
+.page-gif-wide {
+    width: clamp(140px, 38.5vw, 266px);
+    max-width: 266px;
+    height: auto;
+}
+
 /* Improved responsive sizing */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
-        overflow-x: hidden;
+        padding: 7px 3.5px;
     }
     
     .container {
         width: 100%;
-        padding: 5px;
+        padding: 0;
         max-width: 100%;
+        max-height: calc(100vh - 14px);
     }
     
     .question-page {
-        padding: clamp(20px, 5vw, 35px) clamp(15px, 4vw, 25px);
-        border-radius: clamp(20px, 4vw, 28px);
+        padding: clamp(10.5px, 2.8vw, 17.5px) clamp(8.4px, 2.1vw, 14px);
+        border-radius: clamp(12.6px, 2.8vw, 16.8px);
+        max-height: calc(100vh - 28px);
     }
     
     .question-page::after {
-        border-radius: clamp(22px, 4.5vw, 30px);
+        border-radius: clamp(14px, 3.15vw, 18.2px);
     }
     
     .emoji-header {
-        font-size: clamp(3rem, 15vw, 4.5rem);
-        margin-bottom: 1rem;
+        font-size: clamp(1.75rem, 8.4vw, 2.45rem);
+        margin-bottom: 0.56rem;
     }
     
     .main-question, .success-title {
-        font-size: clamp(1.6rem, 7vw, 2.5rem);
-        letter-spacing: 1px;
+        font-size: clamp(0.98rem, 4.2vw, 1.4rem);
+        letter-spacing: 0.35px;
+        margin-bottom: 0.56rem;
     }
     
     h2 {
-        font-size: clamp(1.3rem, 6vw, 2rem);
+        font-size: clamp(0.84rem, 3.5vw, 1.19rem);
+        margin-bottom: 0.56rem;
     }
     
     .subtitle, .persuasion-text {
-        font-size: clamp(0.95rem, 4vw, 1.2rem);
-        margin-bottom: 1.5rem;
+        font-size: clamp(0.63rem, 2.45vw, 0.77rem);
+        margin-bottom: 0.84rem;
+        line-height: 1.5;
     }
     
     .button-container {
         flex-direction: column;
         width: 100%;
-        gap: 15px;
+        gap: 8.4px;
+        margin-top: 1.05rem;
     }
     
     .btn {
         width: 100%;
-        max-width: 320px;
+        max-width: 196px;
     }
     
     .btn-yes {
-        padding: 14px 35px;
-        font-size: 1.1rem;
+        padding: 8.4px 21px;
+        font-size: 0.7rem;
     }
     
     .btn-no {
-        padding: 11px 28px;
-        font-size: 0.95rem;
+        padding: 7px 17.5px;
+        font-size: 0.63rem;
     }
     
     /* Button size variations for mobile */
     .enlarge {
-        padding: 16px 40px !important;
-        font-size: 1.2rem !important;
+        padding: 9.8px 24.5px !important;
+        font-size: 0.77rem !important;
     }
     
     .enlarge-more {
-        padding: 18px 45px !important;
-        font-size: 1.35rem !important;
+        padding: 11.2px 28px !important;
+        font-size: 0.84rem !important;
     }
     
     .huge {
-        padding: 20px 50px !important;
-        font-size: 1.5rem !important;
+        padding: 12.6px 31.5px !important;
+        font-size: 0.95rem !important;
     }
     
     .massive {
-        padding: 24px 60px !important;
-        font-size: 1.7rem !important;
+        padding: 14px 35px !important;
+        font-size: 1.05rem !important;
     }
     
     .shrink {
-        padding: 9px 24px !important;
-        font-size: 0.85rem !important;
+        padding: 5.6px 14px !important;
+        font-size: 0.56rem !important;
     }
     
     .shrink-more {
-        padding: 7px 20px !important;
-        font-size: 0.75rem !important;
+        padding: 4.2px 11.2px !important;
+        font-size: 0.49rem !important;
     }
     
     .tiny {
-        padding: 5px 14px !important;
-        font-size: 0.6rem !important;
+        padding: 3.5px 8.4px !important;
+        font-size: 0.39rem !important;
     }
     
     .invisible {
-        padding: 4px 10px !important;
-        font-size: 0.45rem !important;
+        padding: 2.8px 5.6px !important;
+        font-size: 0.28rem !important;
     }
     
     .promise-list {
-        padding: 0 10px;
+        padding: 0 5.6px;
         max-width: 100%;
+        margin: 0.84rem auto;
     }
     
     .promise-list li {
-        font-size: clamp(0.9rem, 4vw, 1.1rem);
-        padding: 10px 12px;
-        margin: 10px 0;
+        font-size: clamp(0.6rem, 2.45vw, 0.7rem);
+        padding: 5.6px 7px;
+        margin: 5.6px 0;
     }
     
     .promise-list li:hover {
@@ -478,100 +506,206 @@ h2 {
     }
     
     .success-message {
-        padding: 15px 18px;
+        padding: 8.4px 10.5px;
+        margin-top: 0.84rem;
     }
     
     .success-message p {
-        font-size: clamp(0.95rem, 4vw, 1.2rem);
+        font-size: clamp(0.63rem, 2.45vw, 0.77rem);
+        margin: 0.35rem 0;
+    }
+    
+    /* Mobile GIF sizing - smaller */
+    .page-gif {
+        width: clamp(84px, 24.5vw, 140px);
+        max-width: 140px;
+        margin-bottom: 8.4px;
+    }
+    
+    .page-gif-small {
+        width: clamp(63px, 19.6vw, 98px);
+        max-width: 98px;
+    }
+    
+    .page-gif-wide {
+        width: clamp(126px, 35vw, 196px);
+        max-width: 196px;
     }
 }
 
 /* Very small screens (smartphones in portrait) */
 @media (max-width: 400px) {
+    body {
+        padding: 5.6px 3.5px;
+    }
+    
     .question-page {
-        padding: 18px 12px;
+        padding: 8.4px 7px;
+        max-height: calc(100vh - 21px);
     }
     
     .emoji-header {
-        font-size: 2.8rem;
-        margin-bottom: 0.8rem;
+        font-size: 1.54rem;
+        margin-bottom: 0.42rem;
     }
     
     .main-question, .success-title {
-        font-size: 1.4rem;
+        font-size: 0.91rem;
+        margin-bottom: 0.42rem;
     }
     
     h2 {
-        font-size: 1.2rem;
+        font-size: 0.77rem;
+        margin-bottom: 0.42rem;
     }
     
     .subtitle, .persuasion-text {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
+        margin-bottom: 0.7rem;
     }
     
     .btn-yes {
-        padding: 12px 28px;
-        font-size: 1rem;
+        padding: 7px 17.5px;
+        font-size: 0.67rem;
     }
     
     .btn-no {
-        padding: 9px 22px;
-        font-size: 0.85rem;
+        padding: 5.6px 14px;
+        font-size: 0.56rem;
     }
     
     .massive {
-        padding: 20px 45px !important;
-        font-size: 1.4rem !important;
+        padding: 11.2px 28px !important;
+        font-size: 0.91rem !important;
+    }
+    
+    .promise-list {
+        margin: 0.7rem auto;
+        padding: 0 3.5px;
     }
     
     .promise-list li {
-        font-size: 0.85rem;
-        padding: 8px 10px;
+        font-size: 0.56rem;
+        padding: 4.2px 5.6px;
+        margin: 4.2px 0;
+    }
+    
+    .success-message {
+        padding: 7px 8.4px;
+        margin-top: 0.7rem;
+    }
+    
+    .success-message p {
+        font-size: 0.6rem;
+        margin: 0.28rem 0;
+    }
+    
+    /* Very small screen GIF sizing */
+    .page-gif {
+        width: clamp(70px, 28vw, 112px);
+        max-width: 112px;
+        margin-bottom: 7px;
+    }
+    
+    .page-gif-small {
+        width: clamp(56px, 22.4vw, 84px);
+        max-width: 84px;
+    }
+    
+    .page-gif-wide {
+        width: clamp(98px, 42vw, 154px);
+        max-width: 154px;
+    }
+    
+    .button-container {
+        gap: 7px;
+        margin-top: 0.7rem;
     }
 }
 
 /* Landscape mobile */
 @media (max-width: 900px) and (max-height: 500px) {
+    body {
+        padding: 3.5px;
+    }
+    
+    .container {
+        max-height: calc(100vh - 7px);
+    }
+    
     .question-page {
-        padding: 15px 20px;
+        padding: 7px 10.5px;
+        max-height: calc(100vh - 14px);
     }
     
     .emoji-header {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 0.28rem;
     }
     
     .main-question, .success-title {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
+        font-size: 0.91rem;
+        margin-bottom: 0.28rem;
     }
     
     h2 {
-        font-size: 1.3rem;
-        margin-bottom: 0.8rem;
+        font-size: 0.77rem;
+        margin-bottom: 0.35rem;
     }
     
     .subtitle, .persuasion-text {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
+        font-size: 0.6rem;
+        margin-bottom: 0.56rem;
+        line-height: 1.4;
     }
     
     .button-container {
         flex-direction: row;
-        gap: 10px;
-        margin-top: 1.5rem;
+        gap: 5.6px;
+        margin-top: 0.7rem;
     }
     
     .btn {
         width: auto;
+        padding: 5.6px 14px;
+        font-size: 0.63rem;
     }
     
     .promise-list {
-        margin: 1rem auto;
+        margin: 0.56rem auto;
+        padding: 0 7px;
     }
     
     .promise-list li {
-        margin: 6px 0;
-        padding: 6px 10px;
+        margin: 2.8px 0;
+        padding: 2.8px 5.6px;
+        font-size: 0.53rem;
+    }
+    
+    .success-message {
+        margin-top: 0.56rem;
+        padding: 5.6px 8.4px;
+    }
+    
+    .success-message p {
+        font-size: 0.56rem;
+        margin: 0.21rem 0;
+    }
+    
+    /* Landscape GIF sizing - very small */
+    .page-gif {
+        width: clamp(56px, 17.5vw, 84px);
+        max-width: 84px;
+        margin-bottom: 5.6px;
+    }
+    
+    .page-gif-small {
+        width: clamp(42px, 14vw, 63px);
+        max-width: 63px;
+    }
+    
+    .page-gif-wide {
+        width: clamp(84px, 24.5vw, 126px);
+        max-width: 126px;
     }
 }
